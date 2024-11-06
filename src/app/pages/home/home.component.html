@@ -3,6 +3,7 @@
        SideBar
       </mat-drawer>
       <mat-drawer-content class="p-6">
+        <app-products-header (columnsCountChange)="onColumnsCountChange($event)"></app-products-header>
         <mat-grid-list
           gutterSize="16"
           [cols]="4"
@@ -15,5 +16,6 @@
             ></div>
           </mat-grid-tile>
         </mat-grid-list>
+        {{columns}}
       </mat-drawer-content>
 </mat-drawer-container>
