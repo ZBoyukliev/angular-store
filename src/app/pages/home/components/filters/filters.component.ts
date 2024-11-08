@@ -18,7 +18,7 @@ export class FiltersComponent implements OnInit {
    }
 
    onShowCategory(category: string): void {
-    this.showCategory.next(category);
+    this.showCategory.emit(category);
   }
 
 }
