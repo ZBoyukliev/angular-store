@@ -8,31 +8,7 @@
     <mat-grid-list gutterSize="16" [cols]="columns" [rowHeight]="rowHeight">
       <mat-grid-tile>
         <!-- <div app-product-box class="w-full"></div> -->
-        <app-product-box class="w-full" [fullWidthMode]="columns === 1"></app-product-box>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <!-- <div app-product-box class="w-full"></div> -->
-        <app-product-box class="w-full" [fullWidthMode]="columns === 1"></app-product-box>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <!-- <div app-product-box class="w-full"></div> -->
-        <app-product-box class="w-full" [fullWidthMode]="columns === 1"></app-product-box>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <!-- <div app-product-box class="w-full"></div> -->
-        <app-product-box class="w-full" [fullWidthMode]="columns === 1">dsfsdf</app-product-box>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <!-- <div app-product-box class="w-full"></div> -->
-        <app-product-box class="w-full" [fullWidthMode]="columns === 1"></app-product-box>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <!-- <div app-product-box class="w-full"></div> -->
-        <app-product-box class="w-full" [fullWidthMode]="columns === 1"></app-product-box>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <!-- <div app-product-box class="w-full"></div> -->
-        <app-product-box class="w-full" [fullWidthMode]="columns === 1"></app-product-box>
+        <app-product-box (addToCart)="onAddToCart($event)" class="w-full" [fullWidthMode]="columns === 1"></app-product-box>
       </mat-grid-tile>
     </mat-grid-list>
   </mat-drawer-content>
