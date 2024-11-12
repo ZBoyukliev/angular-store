@@ -30,4 +30,8 @@ export class HeaderComponent {
     return this.cartService.getTotal(items);
   }
 
+  onClearCart(): void {
+    this.cartService.clearCart();
+  }
+
 }
