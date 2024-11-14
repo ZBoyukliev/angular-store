@@ -70,7 +70,7 @@ export class CartService {
 
     return filteredItems;
   }
-  
+
   clearCart(): void {
     this.cart.next({ items: [] });
     this._snackBar.open('Cart is cleared.', 'Ok', {
