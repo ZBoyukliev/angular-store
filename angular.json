@@ -57,7 +57,9 @@
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/environments/load-env.ts"
+            ]
           },
           "configurations": {
             "production": {

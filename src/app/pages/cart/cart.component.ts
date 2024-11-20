@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Cart, CartItem } from 'src/app/models/cart.model';
 import { CartService } from 'src/app/services/cart.service';
-// import { loadStripe } from '@stripe/stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -56,12 +56,12 @@ export class CartComponent implements OnInit, OnDestroy {
       .post('http://localhost:4242/checkout', {
         items: this.cart.items,
       })
-      // .subscribe(async (res: any) => {
-      //   let stripe = await loadStripe('your token');
-      //   stripe?.redirectToCheckout({
-      //     sessionId: res.id,
-      //   });
-      // });
+      .subscribe(async (res: any) => {
+        let stripe = await loadStripe('pk_test_51QNDdyDtbf899fJB4JNzZVaKCAfRNQiTcYxwpwxDsqV9KBtx7cflsgnT01aGMaqYpNjUbEgMKoqvu3u9VQSgOMTT0018W54jGW');
+        stripe?.redirectToCheckout({
+          sessionId: res.id,
+        });
+      });
   }
 
   ngOnDestroy() {

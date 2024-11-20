@@ -29,7 +29,6 @@ export class FiltersComponent implements OnInit, OnDestroy {
   }
 
   onShowCategory(category: string): void {
-    console.log(this.showCategory)
     this.showCategory.next(category);
   }
 
