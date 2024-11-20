@@ -24,10 +24,12 @@ export class FiltersComponent implements OnInit, OnDestroy {
       .getAllCategories()
       .subscribe((response: Array<string>) => {
         this.categories = response;
+        console.log(this.categories)
       });
   }
 
   onShowCategory(category: string): void {
+    console.log(this.showCategory)
     this.showCategory.next(category);
   }
 
