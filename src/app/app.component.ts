@@ -10,9 +10,10 @@ import { Cart } from './models/cart.model';
   `,
   styles: []
 })
+  
 export class AppComponent {
+  
   cart: Cart = { items: [] };
-
   constructor(private cartService: CartService) {}
 
   ngOnInit() {
