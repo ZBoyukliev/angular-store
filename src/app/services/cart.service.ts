@@ -6,6 +6,7 @@ import { Cart, CartItem } from '../models/cart.model';
 @Injectable({
   providedIn: 'root',
 })
+  
 export class CartService {
   cart = new BehaviorSubject<Cart>({ items: [] });
 
